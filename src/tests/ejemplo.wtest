@@ -1,0 +1,8 @@
+import conductores.polino
+
+describe "ejemplo" {
+
+	test "Polino es polino" {
+		assert.equals(polino, polino)
+	}
+}
