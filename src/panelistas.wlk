@@ -1,6 +1,6 @@
-
 object horacioPagani {
-	var nivelDeEnojo
+
+	var nivelDeEnojo = 0
 
 	method elevarVoz() {
 		self.aumentarNivelDeEnojo(10)
@@ -11,7 +11,7 @@ object horacioPagani {
 	}
 
 	method calmarse(unosMinutos) {
-		if (! self.estaCaliente()) {
+		if (!self.estaCaliente()) {
 			nivelDeEnojo = 0
 		}
 	}
@@ -28,12 +28,16 @@ object horacioPagani {
 		nivelDeEnojo += unaCantidad
 	}
 
-	method nivelDeEnojo(unValor) {
-		nivelDeEnojo = unValor
+	method nivelDeEnojo() = nivelDeEnojo
+
+	method nivelDeEnojo(unNivel) {
+		nivelDeEnojo = unNivel
 	}
+
 }
 
 object totiPasman {
+
 	var soberbia = 10
 	var tieneSed = false
 
@@ -57,9 +61,23 @@ object totiPasman {
 	method aumentarSoberbia(unaCantidad) {
 		soberbia += unaCantidad
 	}
+
+	method soberbia() = soberbia
+
+	method tieneSed() = tieneSed
+
+	method soberbia(nivelDeSoberbia) {
+		soberbia = nivelDeSoberbia
+	}
+
+	method tieneSed(valorDeVerdad) {
+		tieneSed = valorDeVerdad
+	}
+
 }
 
 object lizzyTagliani {
+
 	var humor = 10
 
 	method elevarVoz() {
@@ -71,7 +89,7 @@ object lizzyTagliani {
 
 	method calmarse(minutos) {
 		if (self.estaDeMalhumor()) {
-			self.aumentarHumor(minutos * 2)
+			self.aumentarHumor(minutos)
 		}
 	}
 
@@ -82,4 +100,11 @@ object lizzyTagliani {
 	method estaDeMalhumor() {
 		return humor < 0
 	}
+
+	method humor() = humor
+
+	method humor(nivelDeHumor) {
+		humor = nivelDeHumor
+	}
+
 }
