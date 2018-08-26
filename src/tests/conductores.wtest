@@ -1,0 +1,37 @@
+import conductores.*
+import panelistas.*
+
+describe "Conductores" {
+	
+	// --- Fantino ---
+	test "Fantino hace opinar de deportes a Pagani" {
+		horacioPagani.nivelDeEnojo(25)
+		fantino.hacerOpinarDeDeportesA(horacioPagani)
+		// Pagani opina de deportes entonces:
+		//  - Eleva la voz (queda con nivelDeEnojo == 35)
+		//  - Toma agua 2 veces (queda con nivelDeEnojo == 28.35, por 35 * 0.9 * 0.9)
+		//  - Se calma 10 min (como esta caliente no hace nada)
+		assert.equals(28.35, horacioPagani.nivelDeEnojo())
+	}
+	
+	test "Fantino hace opinar de deportes a Toti" {
+		totiPasman.soberbia(20)
+		fantino.hacerOpinarDeDeportesA(totiPasman)
+		// Toti opina de deportes entonces:
+		//  - Eleva la voz (queda con soberbia == 30 y tieneSed)
+		//  - Toma agua 2 veces (queda con nivelDeEnojo == 30, y no tieneSed)
+		//  - Se calma 10 min (disminuye su soberbia en 20, quedando en 10)
+		assert.equals(10, totiPasman.soberbia())
+	}
+	
+	
+	// -- Polino --
+	test "Polino hace opinar de chimentos a Lizzy" {
+		lizzyTagliani.humor(-3)
+		polino.hacerOpinarDeChimentosA(lizzyTagliani)
+		// Lizzy opina de chimentos entonces:
+		//  - Se calma 5 minutos (queda con humor == 2, por -3 + 5)
+		//  - Toma agua (queda con humor == 4, por 2 * 2)
+		assert.equals(4, lizzyTagliani.humor())
+	}
+}

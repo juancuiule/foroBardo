@@ -1,10 +1,10 @@
-
 object fantino {
 
 	method hacerOpinarDeDeportesA(unPanelista) {
 		unPanelista.elevarVoz()
-		2.times{ unPanelista.tomarAgua()
-		} unPanelista.calmarse(10)
+		console.println(unPanelista)
+		2.times{ _ => unPanelista.tomarAgua() }
+		unPanelista.calmarse(10)
 	}
 }
 
