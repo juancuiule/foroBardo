@@ -1,9 +1,0 @@
-import panelistas.*
-
-describe "Panelistas" {
-	
-	// --- Pagani ---
-	test "Pagani eleva la voz y su nivel de enojo aumenta en 10" {
-
-	}
-}
