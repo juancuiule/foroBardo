@@ -27,6 +27,12 @@ object horacioPagani {
 	method aumentarNivelDeEnojo(unaCantidad) {
 		nivelDeEnojo += unaCantidad
 	}
+	method serChicaneadoPorToti(){
+          if(self.estaCaliente()){
+              nivelDeEnojo += 1000			
+	   }
+	}
+	
 }
 
 object totiPasman {
@@ -54,6 +60,11 @@ object totiPasman {
 	method aumentarSoberbia(unaCantidad) {
 		soberbia += unaCantidad
 	}
+	method chichanearAHoracio(){
+        soberbia += 20
+        horacioPagani.serChicaneadoPorToti()
+     }
+	
 }
 
 object lizzyTagliani {
